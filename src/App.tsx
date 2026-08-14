@@ -44,7 +44,7 @@ function AppContent() {
   }, []);
 
   const [currentScreen, setCurrentScreen] = useState<ScreenType>(initialRoute.screen);
-  const [targetId, setTargetId] = useState<string>(initialRoute.targetId || 'hanuman-chalisa');
+  const [targetId, setTargetId] = useState<string | undefined>(initialRoute.targetId);
   const [bookmarks, setBookmarks] = useState<string[]>(['hanuman-chalisa', 'gayatri-mantra']);
   const [selectedLocation, setSelectedLocation] = useState<LocationInfo>(DEFAULT_LOCATION);
   const [selectedRegion, setSelectedRegion] = useState<PanchangRegion>('mithila');
@@ -95,9 +95,7 @@ function AppContent() {
       if (typeof window !== 'undefined') {
         const route = parseURLToRoute(window.location.pathname);
         setCurrentScreen(route.screen);
-        if (route.targetId) {
-          setTargetId(route.targetId);
-        }
+        setTargetId(route.targetId);
       }
     };
 
@@ -109,9 +107,7 @@ function AppContent() {
   const handleNavigate = (screen: ScreenType, id?: string) => {
     const norm = normalizeRoute(screen, id);
     setCurrentScreen(norm.screen);
-    if (norm.targetId) {
-      setTargetId(norm.targetId);
-    }
+    setTargetId(norm.targetId);
     const newPath = getURLForRoute(norm.screen, norm.targetId);
     if (typeof window !== 'undefined' && window.location.pathname !== newPath) {
       window.history.pushState({}, '', newPath);
@@ -160,6 +156,33 @@ function AppContent() {
         );
 
       case 'mantra-detail':
+        if (!targetId) {
+          return (
+            <div className="space-y-6 max-w-2xl mx-auto py-16 text-center">
+              <Breadcrumbs
+                items={[
+                  { label: t('home'), screen: 'home' },
+                  { label: t('mantras'), screen: 'mantras' },
+                  { label: 'Not Found' }
+                ]}
+                onNavigate={handleNavigate}
+              />
+              <div className="p-8 bg-[#FFFFFF] dark:bg-[#1A1A1A] rounded-xl border border-[#E5E1DA] dark:border-[#2A2A2A] space-y-4 shadow-xs">
+                <h1 className="font-serif font-bold text-2xl text-[#1A1A1A] dark:text-[#F5F2EF]">Mantra Not Found</h1>
+                <p className="text-xs md:text-sm text-[#6B7280] dark:text-[#9A8F85]">
+                  The requested Sanskrit mantra or stotra could not be found. Browse our complete collection of sacred texts.
+                </p>
+                <button
+                  onClick={() => handleNavigate('mantras')}
+                  className="px-5 py-2.5 bg-[#FF9933] text-white text-xs font-bold rounded-lg hover:bg-[#E08520] transition-colors"
+                >
+                  Browse All Mantras
+                </button>
+              </div>
+            </div>
+          );
+        }
+
         return (
           <MantraDetailView
             mantraId={targetId}
