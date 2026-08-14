@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Dark Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#2D0208" />
+      <stop offset="40%" stop-color="#180104" />
+      <stop offset="80%" stop-color="#080002" />
+      <stop offset="100%" stop-color="#030001" />
+    </radialGradient>
+
+    <!-- Deep Crimson Outer Moon Glow -->
+    <radialGradient id="moonOuterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF1A35" stop-opacity="0.95" />
+      <stop offset="35%" stop-color="#D6001C" stop-opacity="0.75" />
+      <stop offset="65%" stop-color="#800010" stop-opacity="0.4" />
+      <stop offset="85%" stop-color="#400008" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Crimson Moon Body Gradient -->
+    <radialGradient id="moonCore" cx="48%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="45%" stop-color="#FFE8D6" />
+      <stop offset="70%" stop-color="#FF6B7A" />
+      <stop offset="88%" stop-color="#E60021" />
+      <stop offset="100%" stop-color="#A80014" />
+    </radialGradient>
+
+    <!-- Red Mist / Dust Texture -->
+    <radialGradient id="redDust" cx="50%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#FF334B" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#B80018" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drip Liquid Gradients -->
+    <linearGradient id="dripGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A43" />
+      <stop offset="40%" stop-color="#D6001C" />
+      <stop offset="80%" stop-color="#800010" />
+      <stop offset="100%" stop-color="#2D0005" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="dripGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF5266" />
+      <stop offset="50%" stop-color="#E60021" />
+      <stop offset="100%" stop-color="#59000B" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Rim Light for Silhouette -->
+    <radialGradient id="shivaRimLight" cx="50%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#FF8593" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#FF1A35" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filter for subtle cosmic glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+
+  <!-- Cosmic Red Atmosphere & Mist -->
+  <circle cx="960" cy="420" r="650" fill="url(#moonOuterGlow)" />
+  <circle cx="960" cy="420" r="750" fill="url(#redDust)" />
+
+  <!-- Background Dust & Star Particles -->
+  <g opacity="0.65">
+    <circle cx="450" cy="220" r="2" fill="#FF8593" opacity="0.8" />
+    <circle cx="380" cy="350" r="1.5" fill="#FF334B" opacity="0.6" />
+    <circle cx="520" cy="480" r="2.5" fill="#FFCCD2" opacity="0.7" />
+    <circle cx="300" cy="600" r="3" fill="#FF1A35" opacity="0.5" />
+    <circle cx="680" cy="180" r="2" fill="#FFA3AD" opacity="0.9" />
+    <circle cx="750" cy="280" r="1.5" fill="#FF334B" opacity="0.7" />
+    <circle cx="1220" cy="190" r="2.5" fill="#FFCCD2" opacity="0.8" />
+    <circle cx="1380" cy="290" r="1.5" fill="#FF8593" opacity="0.9" />
+    <circle cx="1480" cy="420" r="2" fill="#FF1A35" opacity="0.6" />
+    <circle cx="1550" cy="580" r="3" fill="#FF5266" opacity="0.5" />
+    <circle cx="1140" cy="120" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="820" cy="110" r="1.5" fill="#FFA3AD" opacity="0.8" />
+    <circle cx="1620" cy="220" r="2" fill="#FF334B" opacity="0.7" />
+    <circle cx="250" cy="280" r="2.5" fill="#FF8593" opacity="0.6" />
+  </g>
+
+  <!-- Huge Crimson Full Moon -->
+  <circle cx="960" cy="380" r="320" fill="url(#moonCore)" />
+  <!-- Inner Moon Atmosphere Glow Ring -->
+  <circle cx="960" cy="380" r="320" fill="none" stroke="#FF6B7A" stroke-width="4" opacity="0.4" filter="url(#softBlur)" />
+
+  <!-- Draining / Dripping Crimson Energy Streams below Platform -->
+  <g>
+    <!-- Wide Central Falls -->
+    <path d="M 880 720 Q 875 880 870 1080 L 1050 1080 Q 1045 880 1040 720 Z" fill="url(#dripGrad1)" />
+    <path d="M 910 720 Q 915 900 920 1080 L 1000 1080 Q 1005 900 1010 720 Z" fill="url(#dripGrad2)" opacity="0.9" />
+    
+    <!-- Individual Paint / Energy Drips -->
+    <path d="M 570 720 Q 570 820 568 880 Q 566 895 568 900 Q 570 905 572 900 Q 574 880 574 720 Z" fill="url(#dripGrad2)" />
+    <circle cx="570" cy="912" r="3.5" fill="#FF5266" />
+
+    <path d="M 620 720 Q 620 850 618 940 Q 616 955 618 960 Q 620 965 622 960 Q 624 940 624 720 Z" fill="url(#dripGrad1)" />
+    <circle cx="620" cy="972" r="4" fill="#FF2A43" />
+
+    <path d="M 680 720 Q 678 830 677 910 Q 676 925 678 930 Q 680 935 682 930 Q 683 910 684 720 Z" fill="url(#dripGrad2)" />
+    <circle cx="679" cy="940" r="3" fill="#FF5266" />
+
+    <path d="M 730 720 Q 730 890 728 1000 Q 726 1015 729 1020 Q 732 1015 733 1000 Z" fill="url(#dripGrad1)" />
+
+    <path d="M 780 720 Q 779 870 778 980 Q 777 995 779 1000 Q 781 995 783 980 Z" fill="url(#dripGrad2)" />
+
+    <path d="M 830 720 L 828 1080 L 838 1080 L 836 720 Z" fill="url(#dripGrad1)" />
+
+    <path d="M 1090 720 L 1088 1080 L 1098 1080 L 1095 720 Z" fill="url(#dripGrad1)" />
+
+    <path d="M 1140 720 Q 1141 880 1142 990 Q 1143 1005 1141 1010 Q 1139 1005 1138 990 Z" fill="url(#dripGrad2)" />
+
+    <path d="M 1190 720 Q 1190 860 1188 950 Q 1186 965 1189 970 Q 1192 965 1193 950 Z" fill="url(#dripGrad1)" />
+    <circle cx="1190" cy="980" r="3.5" fill="#FF2A43" />
+
+    <path d="M 1240 720 Q 1240 830 1238 900 Q 1236 915 1239 920 Q 1242 915 1243 900 Z" fill="url(#dripGrad2)" />
+    <circle cx="1240" cy="930" r="3" fill="#FF5266" />
+
+    <path d="M 1290 720 Q 1290 800 1288 860 Q 1286 875 1289 880 Q 1292 875 1293 860 Z" fill="url(#dripGrad1)" />
+    <circle cx="1290" cy="890" r="4" fill="#FF1A35" />
+
+    <path d="M 1340 720 Q 1340 780 1338 820 Q 1336 830 1339 835 Q 1342 830 1343 820 Z" fill="url(#dripGrad2)" />
+    <circle cx="1340" cy="843" r="2.5" fill="#FF5266" />
+  </g>
+
+  <!-- Splashes / Floating Crimson Droplets -->
+  <g opacity="0.85">
+    <circle cx="560" cy="770" r="4" fill="#FF334B" />
+    <circle cx="640" cy="810" r="3" fill="#FF5266" />
+    <circle cx="710" cy="760" r="5" fill="#FF1A35" />
+    <circle cx="760" cy="830" r="3.5" fill="#FF6B7A" />
+    <circle cx="1160" cy="820" r="4" fill="#FF334B" />
+    <circle cx="1220" cy="770" r="3" fill="#FF5266" />
+    <circle cx="1280" cy="800" r="4.5" fill="#FF1A35" />
+    <circle cx="1360" cy="760" r="3" fill="#FF8593" />
+  </g>
+
+  <!-- Dark Altar / Floating Rock Platform -->
+  <g>
+    <!-- Main Floating Rock Base -->
+    <path d="M 520 710 Q 720 695 960 695 Q 1200 695 1400 710 Q 1420 725 1380 735 Q 1180 750 960 750 Q 740 750 540 735 Q 500 725 520 710 Z" fill="#0A0103" />
+    <path d="M 540 705 Q 750 690 960 690 Q 1170 690 1380 705 Q 1390 715 1360 722 Q 1160 732 960 732 Q 760 732 560 722 Q 530 715 540 705 Z" fill="#140306" />
+    
+    <!-- Top Layer Seat -->
+    <path d="M 620 690 Q 790 682 960 682 Q 1130 682 1300 690 Q 1310 698 1280 704 Q 1120 712 960 712 Q 800 712 640 704 Q 610 698 620 690 Z" fill="#060002" />
+  </g>
+
+  <!-- Kamandalu (Water Pot) on Left of Platform -->
+  <g fill="#080103" stroke="#FF334B" stroke-width="0.5" opacity="0.95">
+    <ellipse cx="620" cy="690" rx="18" ry="10" />
+    <path d="M 606 690 Q 602 672 620 662 Q 638 672 634 690 Z" />
+    <rect x="614" y="652" width="12" height="10" rx="2" />
+    <path d="M 612 652 Q 620 644 628 652" fill="none" stroke-linecap="round" stroke-width="2" />
+  </g>
+
+  <!-- Trishula (Trident) Standing vertically on Left -->
+  <g>
+    <!-- Long Shaft -->
+    <line x1="680" y1="210" x2="680" y2="690" stroke="#0A0103" stroke-width="10" stroke-linecap="round" />
+    <line x1="680" y1="210" x2="680" y2="690" stroke="#FF334B" stroke-width="1" opacity="0.5" />
+
+    <!-- Damru Tied to Shaft -->
+    <g fill="#080103" stroke="#FF5266" stroke-width="0.8">
+      <path d="M 662 380 L 698 380 L 670 410 L 698 440 L 662 440 L 690 410 Z" />
+      <line x1="680" y1="380" x2="680" y2="440" stroke="#FF1A35" stroke-width="2" />
+      <!-- Damru String & Balls -->
+      <path d="M 680 410 Q 655 425 650 435" fill="none" stroke="#FF8593" stroke-width="1.5" />
+      <circle cx="649" cy="436" r="3" fill="#FF1A35" />
+      <path d="M 680 410 Q 705 425 710 435" fill="none" stroke="#FF8593" stroke-width="1.5" />
+      <circle cx="711" cy="436" r="3" fill="#FF1A35" />
+    </g>
+
+    <!-- Fluttering Red Cloth Ribbon -->
+    <path d="M 680 395 Q 640 405 620 440 Q 600 480 625 520 Q 610 470 635 435 Z" fill="#D6001C" />
+    <path d="M 680 405 Q 650 425 635 460 Q 620 495 645 540 Q 630 490 648 450 Z" fill="#800010" />
+
+    <!-- Trident Blade Head -->
+    <!-- Center Blade -->
+    <path d="M 680 120 L 692 180 Q 692 220 680 230 Q 668 220 668 180 Z" fill="#0A0103" stroke="#FF5266" stroke-width="1" />
+    <!-- Left Curved Prong -->
+    <path d="M 680 220 Q 635 210 630 160 Q 628 135 640 145 Q 650 170 670 195 Z" fill="#0A0103" stroke="#FF5266" stroke-width="1" />
+    <!-- Right Curved Prong -->
+    <path d="M 680 220 Q 725 210 730 160 Q 732 135 720 145 Q 710 170 690 195 Z" fill="#0A0103" stroke="#FF5266" stroke-width="1" />
+    <!-- Base Ring -->
+    <rect x="668" y="225" width="24" height="12" rx="3" fill="#0A0103" stroke="#FF334B" stroke-width="1" />
+  </g>
+
+  <!-- LORD SHIVA SILHOUETTE (Center Meditating) -->
+  <g fill="#070002">
+    <!-- Back Outer Glow Rim on Silhouette -->
+    <path d="M 960 170 
+             C 995 170 1025 190 1025 225 
+             C 1025 240 1015 255 1020 270 
+             C 1040 280 1060 295 1070 315 
+             C 1080 335 1075 355 1065 375 
+             C 1090 385 1120 400 1140 430 
+             C 1165 465 1180 505 1205 540 
+             C 1225 565 1255 580 1285 590 
+             C 1315 600 1310 630 1280 645 
+             C 1230 670 1150 685 960 685 
+             C 770 685 690 670 640 645 
+             C 610 630 605 600 635 590 
+             C 665 580 695 565 715 540 
+             C 740 505 755 465 780 430 
+             C 800 400 830 385 855 375 
+             C 845 355 840 335 850 315 
+             C 860 295 880 280 900 270 
+             C 905 255 895 240 895 225 
+             C 895 190 925 170 960 170 Z" fill="url(#shivaRimLight)" />
+
+    <!-- Main Silhouette Path -->
+    <!-- Matted Hair / Jata Mukuta Top -->
+    <!-- Head & Neck -->
+    <!-- Shoulders & Torso -->
+    <!-- Folded Legs in Padmasana -->
+    <path d="
+      M 960 175
+      C 972 175 985 182 988 195
+      C 992 208 980 218 995 228
+      C 1008 222 1018 235 1012 248
+      C 1005 260 995 268 1002 278
+      C 1018 285 1038 298 1048 315
+      C 1058 332 1055 350 1048 368
+      C 1060 372 1075 380 1085 392
+      C 1105 415 1120 440 1135 468
+      C 1148 492 1162 518 1182 538
+      C 1205 560 1235 572 1262 582
+      C 1282 590 1290 605 1282 618
+      C 1272 630 1250 638 1225 646
+      C 1180 660 1110 672 960 672
+      C 810 672 740 660 695 646
+      C 670 638 648 630 638 618
+      C 630 605 638 590 658 582
+      C 685 572 715 560 738 538
+      C 758 518 772 492 785 468
+      C 800 440 815 415 835 392
+      C 845 380 860 372 872 368
+      C 865 350 862 332 872 315
+      C 882 298 902 285 918 278
+      C 925 268 915 260 908 248
+      C 902 235 912 222 925 228
+      C 940 218 928 208 932 195
+      C 935 182 948 175 960 175 Z
+    " fill="#090103" stroke="#FF1A35" stroke-width="0.8" />
+
+    <!-- Broad Chest & Athletic Muscular Lines (Subtle Silhouette Detailing) -->
+    <!-- Collarbones & Neck -->
+    <path d="M 935 310 Q 960 322 985 310" stroke="#FF334B" stroke-width="1.2" fill="none" opacity="0.4" />
+    
+    <!-- Pectoral Muscle Contours -->
+    <path d="M 915 370 Q 955 388 960 388 Q 965 388 1005 370" stroke="#FF334B" stroke-width="1.2" fill="none" opacity="0.35" />
+    <!-- Abdominal Midline -->
+    <line x1="960" y1="388" x2="960" y2="480" stroke="#FF334B" stroke-width="1" opacity="0.3" />
+    <!-- Bicep / Arm Contours -->
+    <path d="M 880 375 Q 860 420 840 470 Q 820 520 800 555" stroke="#FF334B" stroke-width="1" fill="none" opacity="0.3" />
+    <path d="M 1040 375 Q 1060 420 1080 470 Q 1100 520 1120 555" stroke="#FF334B" stroke-width="1" fill="none" opacity="0.3" />
+
+    <!-- Meditating Hands Folded in Dhyana Mudra in Lap -->
+    <ellipse cx="960" cy="565" rx="45" ry="22" fill="#070002" stroke="#FF334B" stroke-width="1" opacity="0.8" />
+    <path d="M 930 560 Q 960 575 990 560" stroke="#FF5266" stroke-width="1.2" fill="none" opacity="0.6" />
+
+    <!-- Crossed Knees Contours -->
+    <path d="M 720 620 Q 790 570 870 580" stroke="#FF334B" stroke-width="1" fill="none" opacity="0.35" />
+    <path d="M 1200 620 Q 1130 570 1050 580" stroke="#FF334B" stroke-width="1" fill="none" opacity="0.35" />
+
+    <!-- Sacred Rudraksha Mala Threads -->
+    <!-- Neck Mala -->
+    <path d="M 930 325 Q 960 375 990 325" fill="none" stroke="#FF5266" stroke-width="1.5" stroke-dasharray="3,4" opacity="0.8" />
+    <path d="M 922 320 Q 960 395 998 320" fill="none" stroke="#FF334B" stroke-width="1.5" stroke-dasharray="3,4" opacity="0.7" />
+    <!-- Arm Bands -->
+    <ellipse cx="865" cy="405" rx="14" ry="6" fill="none" stroke="#FF5266" stroke-width="1.5" stroke-dasharray="2,3" opacity="0.8" />
+    <ellipse cx="1055" cy="405" rx="14" ry="6" fill="none" stroke="#FF5266" stroke-width="1.5" stroke-dasharray="2,3" opacity="0.8" />
+
+    <!-- CRESCENT MOON & TRIPUNDRA ON FOREHEAD -->
+    <g filter="url(#glow)">
+      <!-- Tripundra (Three Horizontal White/Silver Sacred Lines) -->
+      <line x1="942" y1="262" x2="978" y2="262" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
+      <line x1="940" y1="267" x2="980" y2="267" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
+      <line x1="944" y1="272" x2="976" y2="272" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
+      
+      <!-- Red Bindu / Third Eye Dot in Center -->
+      <circle cx="960" cy="267" r="2.5" fill="#FF0022" />
+
+      <!-- Crescent Moon (Chandra) tucked in hair -->
+      <path d="M 982 230 A 14 14 0 0 1 992 252 A 11 11 0 0 0 982 230 Z" fill="#FFF8EE" />
+    </g>
+  </g>
+
+  <!-- Foreground Vignette Gradient -->
+  <rect width="1920" height="1080" fill="none" stroke="#2A0006" stroke-width="20" opacity="0.5" />
+</svg>
