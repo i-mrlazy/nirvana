@@ -7,7 +7,7 @@ import { HOROSCOPE_DATA } from '../data/horoscope';
 import { PRACTICES_DATA } from '../data/practices';
 import { getURLForRoute } from './router';
 
-const DOMAIN = 'https://nirvana-app.org';
+const DOMAIN = 'https://nirvana-flax.vercel.app';
 
 export interface SEOData {
   title: string;

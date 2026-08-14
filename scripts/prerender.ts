@@ -10,7 +10,7 @@ import { getSEOData } from '../src/utils/seo';
 import { generateSitemapXml } from '../src/utils/sitemapGenerator';
 import { ScreenType } from '../src/types';
 
-const DOMAIN = 'https://nirvana-app.org';
+const DOMAIN = 'https://nirvana-flax.vercel.app';
 const DIST_DIR = path.resolve(process.cwd(), 'dist');
 
 interface RouteConfig {

@@ -5,7 +5,7 @@ import { PALMISTRY_DATA } from '../data/palmistry';
 import { HOROSCOPE_DATA } from '../data/horoscope';
 import { PRACTICES_DATA } from '../data/practices';
 
-export const DOMAIN = 'https://nirvana-app.org';
+export const DOMAIN = 'https://nirvana-flax.vercel.app';
 
 export interface SitemapUrlEntry {
   path: string;
