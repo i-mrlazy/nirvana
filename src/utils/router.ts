@@ -6,15 +6,27 @@ export interface RouteState {
   path: string;
 }
 
-export function normalizeRoute(screen: ScreenType, targetId?: string): { screen: ScreenType; targetId?: string } {
-  let cleanScreen = screen;
-  let cleanId = targetId ? targetId.toLowerCase().trim() : undefined;
+const STRICT_HUB_SCREENS: ReadonlySet<ScreenType> = new Set([
+  'home',
+  'mantras',
+  'deities',
+  'stories',
+  'calendar',
+  'bookmarks',
+  'about',
+  'privacy',
+  'terms',
+  'disclaimer',
+  'contact',
+]);
 
-  // Normalize screen if an ID was provided for index screens
-  if (cleanId) {
-    if (cleanScreen === 'mantras') cleanScreen = 'mantra-detail';
-    if (cleanScreen === 'deities') cleanScreen = 'deity-detail';
-    if (cleanScreen === 'stories') cleanScreen = 'story-detail';
+export function normalizeRoute(screen: ScreenType, targetId?: string): { screen: ScreenType; targetId?: string } {
+  const cleanScreen = screen;
+  const cleanId = targetId ? targetId.toLowerCase().trim() : undefined;
+
+  // Strict hub screens can never have a targetId and must never be converted into detail screens
+  if (STRICT_HUB_SCREENS.has(cleanScreen)) {
+    return { screen: cleanScreen, targetId: undefined };
   }
 
   return { screen: cleanScreen, targetId: cleanId };

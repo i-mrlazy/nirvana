@@ -20,8 +20,23 @@ export interface SEOData {
   jsonLd: object[];
 }
 
+const HUB_PATHS: Partial<Record<ScreenType, string>> = {
+  home: '/',
+  mantras: '/mantras',
+  deities: '/deities',
+  stories: '/stories',
+  calendar: '/panchang',
+  about: '/about',
+  privacy: '/privacy',
+  terms: '/terms',
+  disclaimer: '/disclaimer',
+  contact: '/contact',
+  bookmarks: '/bookmarks',
+};
+
 export function getSEOData(screen: ScreenType, targetId?: string): SEOData {
-  const currentPath = getURLForRoute(screen, targetId);
+  const hubPath = HUB_PATHS[screen];
+  const currentPath = hubPath ?? getURLForRoute(screen, targetId);
   const canonicalUrl = `${DOMAIN}${currentPath}`;
   const baseBreadcrumb = { name: 'Home', url: `${DOMAIN}/` };
 
