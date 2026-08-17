@@ -78,6 +78,21 @@ export function getAllSitemapEntries(): SitemapUrlEntry[] {
   // 8. Panchang Calendar
   add('/panchang', 'Hindu Panchang & Auspicious Timings', 'daily', '0.9');
 
+  // 9. About Page
+  add('/about', 'About NIRVANA — The Abstract Mind', 'monthly', '0.7');
+
+  // 10. Privacy Policy Page
+  add('/privacy', 'Privacy Policy — NIRVANA', 'monthly', '0.7');
+
+  // 11. Terms of Use Page
+  add('/terms', 'Terms of Use — NIRVANA', 'monthly', '0.7');
+
+  // 12. Disclaimer Page
+  add('/disclaimer', 'Disclaimer — NIRVANA', 'monthly', '0.7');
+
+  // 13. Contact Page
+  add('/contact', 'Contact NIRVANA — The Abstract Mind', 'monthly', '0.7');
+
   return entries;
 }
 

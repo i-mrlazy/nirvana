@@ -117,6 +117,31 @@ export const Footer: React.FC<FooterProps> = ({
                 {t('bookmarks')}
               </a>
             </li>
+            <li>
+              <a href={getURLForRoute('about')} onClick={(e) => { e.preventDefault(); onNavigate('about'); }} className="hover:text-[#FF9933] transition-colors">
+                About
+              </a>
+            </li>
+            <li>
+              <a href={getURLForRoute('privacy')} onClick={(e) => { e.preventDefault(); onNavigate('privacy'); }} className="hover:text-[#FF9933] transition-colors">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href={getURLForRoute('terms')} onClick={(e) => { e.preventDefault(); onNavigate('terms'); }} className="hover:text-[#FF9933] transition-colors">
+                Terms
+              </a>
+            </li>
+            <li>
+              <a href={getURLForRoute('disclaimer')} onClick={(e) => { e.preventDefault(); onNavigate('disclaimer'); }} className="hover:text-[#FF9933] transition-colors">
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <a href={getURLForRoute('contact')} onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="hover:text-[#FF9933] transition-colors">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 

@@ -319,7 +319,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <div className="w-56 h-56 md:w-64 md:h-64 rounded-xl overflow-hidden border border-white/20 shrink-0">
             <img
-              src="/images/hanuman.jpg"
+              src="/images/hanuman.webp"
               alt="Lord Hanuman meditating"
               className="w-full h-full object-cover"
             />

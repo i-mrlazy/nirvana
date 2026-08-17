@@ -28,7 +28,7 @@ export function getSEOData(screen: ScreenType, targetId?: string): SEOData {
   let title = 'NIRVANA — The Abstract Mind | Mantras, Deities, Raashifal & Panchang';
   let description = 'Explore authentic Sanskrit mantras, Hanuman Chalisa, deity biographies, daily Raashifal predictions, Hastarekha Palmistry guide, and Hindu Panchang timings at NIRVANA — The Abstract Mind.';
   let ogType = 'website';
-  let ogImage = `${DOMAIN}/images/hanuman.jpg`;
+  let ogImage = `${DOMAIN}/images/hanuman.webp`;
   let noindex = false;
   const breadcrumbs: { name: string; url: string }[] = [baseBreadcrumb];
   const jsonLd: object[] = [];
@@ -250,6 +250,41 @@ export function getSEOData(screen: ScreenType, targetId?: string): SEOData {
       description = 'Access your saved Sanskrit mantras and daily chants for quick offline practice.';
       breadcrumbs.push({ name: 'Bookmarks', url: `${DOMAIN}/bookmarks` });
       noindex = true;
+      break;
+    }
+
+    case 'about': {
+      title = 'About NIRVANA — The Abstract Mind';
+      description = 'Learn about NIRVANA — an independent digital reference platform exploring mantras, deities, traditional stories, Raashifal, palmistry, Panchang and Indian traditions.';
+      breadcrumbs.push({ name: 'About NIRVANA', url: `${DOMAIN}/about` });
+      break;
+    }
+
+    case 'privacy': {
+      title = 'Privacy Policy — NIRVANA';
+      description = 'Read the NIRVANA Privacy Policy to understand how information, cookies, analytics and potential advertising services may be handled on the website.';
+      breadcrumbs.push({ name: 'Privacy Policy', url: `${DOMAIN}/privacy` });
+      break;
+    }
+
+    case 'terms': {
+      title = 'Terms of Use — NIRVANA';
+      description = 'Read the Terms of Use for NIRVANA, an independent digital reference platform covering spiritual, religious, cultural and traditional subjects.';
+      breadcrumbs.push({ name: 'Terms of Use', url: `${DOMAIN}/terms` });
+      break;
+    }
+
+    case 'disclaimer': {
+      title = 'Disclaimer — NIRVANA';
+      description = 'Read the NIRVANA Disclaimer covering traditional beliefs, Raashifal, astrology, palmistry, spiritual practices and the informational nature of the website.';
+      breadcrumbs.push({ name: 'Disclaimer', url: `${DOMAIN}/disclaimer` });
+      break;
+    }
+
+    case 'contact': {
+      title = 'Contact NIRVANA — The Abstract Mind';
+      description = 'Contact NIRVANA for website feedback, content corrections, technical issues and general inquiries about the independent digital reference platform.';
+      breadcrumbs.push({ name: 'Contact NIRVANA', url: `${DOMAIN}/contact` });
       break;
     }
   }

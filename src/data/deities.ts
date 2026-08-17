@@ -10,7 +10,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Mahadev, Nataraja, Bholenath',
     description: 'Experience the divine grace of Mahadev, the destroyer of ego and the transformer within the sacred Trimurti.',
     fullBiography: 'Lord Shiva is one of the principal deities of Hinduism, representing the supreme cosmic consciousness, meditation, asceticism, and the transformative cycle of time and destruction of delusion. Resting upon Mount Kailash, he embodies both serene stillness and dynamic cosmic energy (Tandava).',
-    image: '/images/shiva.jpg',
+    image: '/images/shiva.webp',
     category: 'Trimurti',
     mantraIds: ['om-namah-shivaya', 'mahamrityunjaya-mantra'],
     stotraIds: ['shiv-tandav-stotram', 'lingashtakam', 'shiva-panchakshara'],
@@ -57,7 +57,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Bajrangbali, Pawanputra, Anjaneya',
     description: 'Immerse yourself in the strength, selfless service, courage, and unconditional devotion to Lord Rama.',
     fullBiography: 'Lord Hanuman is the divine vanara hero of the Ramayana, revered across India as the supreme exemplar of Bhakti (devotion), physical power, intellect, and humility. Born to Anjana and Kesari through the blessing of Vayu (Wind God), Hanuman is an avatar of Shiva.',
-    image: '/images/hanuman.jpg',
+    image: '/images/hanuman.webp',
     category: 'Vedic',
     mantraIds: ['hanuman-chalisa', 'bajrang-baan', 'hanuman-ashtak'],
     stotraIds: ['hanuman-chalisa', 'sundarkand'],
@@ -100,7 +100,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Vighnaharta, Ganapati, Vinayaka',
     description: 'Invoke the lord of new beginnings, intellect, wisdom, and auspiciousness before any vital journey.',
     fullBiography: 'Lord Ganesha is the elephant-headed deity invoked at the start of every sacred rite, journey, or new enterprise. He represents supreme intellect, discernment (Buddhi), and the harmony between human and cosmic wisdom.',
-    image: '/images/ganesha.jpg',
+    image: '/images/ganesha.webp',
     category: 'Ganapati',
     mantraIds: ['ganesh-mantra', 'om-gan-ganapataye'],
     stotraIds: ['sankata-nashana-ganesha-stotram', 'ganesh-atharvashirsha'],
@@ -128,7 +128,7 @@ export const DEITIES_DATA: Deity[] = [
       { name: 'Mooshak (Mouse)', iconName: 'pest_control', meaning: 'Mastery over restlessness, desires, and ego.' }
     ],
     family: [
-      { name: 'Lord Shiva', relation: 'Father', image: '/images/shiva.jpg', deityId: 'shiva' },
+      { name: 'Lord Shiva', relation: 'Father', image: '/images/shiva.webp', deityId: 'shiva' },
       { name: 'Goddess Parvati', relation: 'Mother', image: '/images/parvati.jpg' },
       { name: 'Lord Kartikeya', relation: 'Brother', image: '/images/kartikey.jpg' }
     ],
@@ -143,7 +143,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Mahalakshmi, Shri, Kamala',
     description: 'Bestower of spiritual and material abundance, purity, auspiciousness, and righteous prosperity.',
     fullBiography: 'Goddess Lakshmi is the divine consort of Lord Vishnu and the deity governing wealth, fortune, royal majesty, fertility, and inner light. Emerging from the Churning of the Ocean (Samudra Manthan) seated on a blooming lotus, she grants Sri (auspicious radiance).',
-    image: '/images/lakshmi.jpg',
+    image: '/images/lakshmi.webp',
     category: 'Tridevi',
     mantraIds: ['lakshmi-mantra', 'sree-suktam'],
     stotraIds: ['kanakadhara-stotram', 'lakshmi-ashtottara'],
@@ -171,7 +171,7 @@ export const DEITIES_DATA: Deity[] = [
       { name: 'Elephants (Gaja)', iconName: 'water', meaning: 'Royal majesty, strength, and continuous showers of grace.' }
     ],
     family: [
-      { name: 'Lord Vishnu', relation: 'Divine Consort', image: '/images/vishnu.jpg' }
+      { name: 'Lord Vishnu', relation: 'Divine Consort', image: '/images/vishnu.webp' }
     ],
     relatedDeityIds: ['vishnu', 'ganesha', 'saraswati']
   },
@@ -184,7 +184,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Govinda, Gopala, Vasudeva, Yogeshwara',
     description: 'The eighth avatar of Vishnu who delivered the Bhagavad Gita and taught the path of selfless duty (Karma Yoga).',
     fullBiography: 'Lord Krishna is one of the most beloved deities in Sanatana Dharma. Born in Mathura and raised in Vrindavan, Krishna\'s life encompasses enchanted childhood pastimes, the destruction of tyrants, the timeless songs of divine love with Radha, and the philosophical peak of the Bhagavad Gita.',
-    image: '/images/krishna.jpg',
+    image: '/images/krishna.webp',
     category: 'Avatara',
     mantraIds: ['hare-krishna-mahantra', 'krishna-moola-mantra'],
     stotraIds: ['madhurashtakam', 'bhagavad-gita-summary'],
@@ -228,7 +228,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Mahishasuramardini, Chandika, Jagadamba',
     description: 'The supreme feminine energy (Shakti) shielding devotees from negativity, fear, and cosmic ignorance.',
     fullBiography: 'Goddess Durga represents the unified warrior strength of all divine forces created to defeat the demon Mahishasura. Riding a lion and bearing ten arms with celestial weapons, Durga radiates fierce maternal protection and unyielding justice.',
-    image: '/images/durga.jpg',
+    image: '/images/durga.webp',
     category: 'Tridevi',
     mantraIds: ['durga-mantra', 'navarna-mantra'],
     stotraIds: ['durga-saptashati', 'mahishasura-mardini-stotram'],
@@ -253,7 +253,7 @@ export const DEITIES_DATA: Deity[] = [
       { name: 'Trishul (Trident)', iconName: 'flash_on', meaning: 'Removal of physical, mental, and spiritual afflictions.' }
     ],
     family: [
-      { name: 'Lord Shiva', relation: 'Divine Consort', image: '/images/shiva.jpg', deityId: 'shiva' }
+      { name: 'Lord Shiva', relation: 'Divine Consort', image: '/images/shiva.webp', deityId: 'shiva' }
     ],
     relatedDeityIds: ['shiva', 'lakshmi', 'saraswati']
   },
@@ -266,7 +266,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Narayana, Hari, Madhava',
     description: 'The supreme guardian who reincarnates whenever righteousness wanes to restore cosmic order.',
     fullBiography: 'Lord Vishnu is the supreme preserver within the Hindu Trinity. Reclining upon the thousand-headed serpent Adishesha in the cosmic ocean of milk (Kshira Sagara), Vishnu descends through Dashavatara (10 avatars) to sustain cosmic law (Dharma).',
-    image: '/images/vishnu.jpg',
+    image: '/images/vishnu.webp',
     category: 'Trimurti',
     mantraIds: ['om-namo-narayanaya', 'vishnu-moola-mantra'],
     stotraIds: ['vishnu-sahasranama'],
@@ -290,7 +290,7 @@ export const DEITIES_DATA: Deity[] = [
       { name: 'Sudarshana Chakra', iconName: 'rotate_right', meaning: 'Wheel of time and supreme protection.' }
     ],
     family: [
-      { name: 'Goddess Lakshmi', relation: 'Consort', image: '/images/lakshmi.jpg', deityId: 'lakshmi' }
+      { name: 'Goddess Lakshmi', relation: 'Consort', image: '/images/lakshmi.webp', deityId: 'lakshmi' }
     ],
     relatedDeityIds: ['lakshmi', 'krishna', 'rama', 'shiva']
   },
@@ -303,7 +303,7 @@ export const DEITIES_DATA: Deity[] = [
     epithet: 'Sharada, Veenapani, Vani',
     description: 'Divine inspiration for students, artists, scholars, and spiritual seekers yearning for pure speech and wisdom.',
     fullBiography: 'Goddess Saraswati is the deity of speech (Vak), wisdom, music, arts, and learning. Clad in pristine white garments seated on a white lotus or swan, she holds the Veena, representing tuning one\'s mind to cosmic rhythm.',
-    image: '/images/saraswati.jpg',
+    image: '/images/saraswati.webp',
     category: 'Tridevi',
     mantraIds: ['saraswati-mantra', 'gayatri-mantra'],
     stotraIds: ['saraswati-stotram'],

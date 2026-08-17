@@ -50,6 +50,16 @@ export function getURLForRoute(screen: ScreenType, targetId?: string): string {
       return '/panchang';
     case 'bookmarks':
       return '/bookmarks';
+    case 'about':
+      return '/about';
+    case 'privacy':
+      return '/privacy';
+    case 'terms':
+      return '/terms';
+    case 'disclaimer':
+      return '/disclaimer';
+    case 'contact':
+      return '/contact';
     default:
       return '/';
   }
@@ -68,6 +78,21 @@ export function parseURLToRoute(pathname: string): { screen: ScreenType; targetI
   const rawSlug = parts[1] ? decodeURIComponent(parts[1]).toLowerCase().trim() : undefined;
 
   switch (section) {
+    case 'about':
+      return { screen: 'about' };
+
+    case 'privacy':
+      return { screen: 'privacy' };
+
+    case 'terms':
+      return { screen: 'terms' };
+
+    case 'disclaimer':
+      return { screen: 'disclaimer' };
+
+    case 'contact':
+      return { screen: 'contact' };
+
     case 'mantras':
       if (rawSlug) {
         return { screen: 'mantra-detail', targetId: rawSlug };

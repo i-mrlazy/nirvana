@@ -12,7 +12,12 @@ export type ScreenType =
   | 'mantras'
   | 'bookmarks'
   | 'horoscope'
-  | 'palmistry';
+  | 'palmistry'
+  | 'about'
+  | 'privacy'
+  | 'terms'
+  | 'disclaimer'
+  | 'contact';
 
 export type PanchangRegion = 'drik' | 'mithila' | 'amanta' | 'tamil' | 'bengali';
 

@@ -18,6 +18,11 @@ import { HomeView } from './views/HomeView';
 import { MantraDetailView } from './views/MantraDetailView';
 import { HoroscopeView } from './views/HoroscopeView';
 import { PalmistryView } from './views/PalmistryView';
+import { AboutView } from './views/AboutView';
+import { PrivacyView } from './views/PrivacyView';
+import { TermsView } from './views/TermsView';
+import { DisclaimerView } from './views/DisclaimerView';
+import { ContactView } from './views/ContactView';
 
 import { DEFAULT_LOCATION, getPanchangForDate, REGIONAL_PANCHANG_OPTIONS } from './data/calendar';
 import { generatePanchangICS, downloadICSFile } from './utils/icsExport';
@@ -771,6 +776,41 @@ function AppContent() {
           </div>
         );
       }
+
+      case 'about':
+        return (
+          <AboutView
+            onNavigate={handleNavigate}
+          />
+        );
+
+      case 'privacy':
+        return (
+          <PrivacyView
+            onNavigate={handleNavigate}
+          />
+        );
+
+      case 'terms':
+        return (
+          <TermsView
+            onNavigate={handleNavigate}
+          />
+        );
+
+      case 'disclaimer':
+        return (
+          <DisclaimerView
+            onNavigate={handleNavigate}
+          />
+        );
+
+      case 'contact':
+        return (
+          <ContactView
+            onNavigate={handleNavigate}
+          />
+        );
 
       default:
         return (
